@@ -1,5 +1,7 @@
-﻿(function() {
-	window.app.filter('parseDate', parseDate);
+﻿module.exports = function (ngModule){
+    'use strict';
+
+    ngModule.filter('parseDate', parseDate);
 
 	function parseDate() {
 		return function(input) {
@@ -8,4 +10,4 @@
 			return new Date(parseInt(input.substr(6)));
 		}
 	}
-})();
+}

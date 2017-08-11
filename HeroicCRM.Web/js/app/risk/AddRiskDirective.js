@@ -1,14 +1,14 @@
-﻿(function() {
-	'use strict';
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.directive('addRisk', addRisk);
+    ngModule.directive('addRisk', addRisk);
 
 	function addRisk() {
 		return {
 			scope: {
 				customer: "="
 			},
-			templateUrl: '/risk/template/addRisk.tmpl.cshtml',
+			templateUrl:  require('./templates/addRisk.tmpl.cshtml'),
 			controller: controller,
 			controllerAs: 'vm'
 		}
@@ -42,4 +42,4 @@
 				});
 		}
 	}
-})();
+}

@@ -1,7 +1,7 @@
-﻿(function () {
-	'use strict';
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.directive('formGroupValidation', formGroupValidation);
+    ngModule.directive('formGroupValidation', formGroupValidation);
 
 	function formGroupValidation() {
 		return {
@@ -48,4 +48,4 @@
 		}
 	}
 
-})();
+}

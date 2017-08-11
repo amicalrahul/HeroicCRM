@@ -1,7 +1,7 @@
-﻿(function () {
+﻿module.exports = function (ngModule) {
 	'use strict';
 
-	window.app.controller('LoginController', LoginController);
+	ngModule.controller('LoginController', LoginController);
 
 	LoginController.$inject = ['$window', '$http'];
 	function LoginController($window, $http) {
@@ -27,4 +27,4 @@
 				});
 		}
 	}
-})();
+}

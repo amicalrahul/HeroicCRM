@@ -1,13 +1,13 @@
-﻿(function() {
+﻿module.exports = function (ngModule){
 	'use strict';
 
-	window.app.directive('customerDetails', customerDetails);
+	ngModule.directive('customerDetails', customerDetails);
 	function customerDetails() {
 		return {
 			scope: {
 				customer: '='
 			},
-			templateUrl: '/customer/template/customerDetails.tmpl.cshtml',
+			templateUrl:  require('./templates/customerDetails.tmpl.cshtml'),
 			controller: controller,
 			controllerAs: 'vm'
 		}
@@ -51,4 +51,4 @@
 			});
 		}
 	}
-})();
+}

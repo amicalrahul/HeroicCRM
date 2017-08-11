@@ -1,7 +1,7 @@
-﻿(function () {
-	'use strict';
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.directive('inputValidationIcons', inputValidationIcons);
+    ngModule.directive('inputValidationIcons', inputValidationIcons);
 
 	function inputValidationIcons() {
 		return {
@@ -38,4 +38,4 @@
 			return $scope.form[vm.field].$valid;
 		}
 	}
-})();
+}

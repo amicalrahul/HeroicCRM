@@ -1,11 +1,11 @@
-﻿(function() {
+﻿module.exports = function (ngModule){
 	"use strict";
 
-	window.app.directive('addCustomer', addCustomer);
+	ngModule.directive('addCustomer', addCustomer);
 
 	function addCustomer() {
 		return {
-			templateUrl: '/customer/template/addCustomer.tmpl.cshtml',
+			template: require('./templates/addCustomer.tmpl.cshtml'),
 			controller: controller,
 			controllerAs: 'vm'
 		}
@@ -35,4 +35,4 @@
 				});
 		}
 	}
-})();
+}

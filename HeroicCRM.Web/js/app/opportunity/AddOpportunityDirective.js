@@ -1,14 +1,14 @@
-﻿(function() {
-	'use strict';
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.directive('addOpportunity', addOpportunity);
+    ngModule.directive('addOpportunity', addOpportunity);
 
 	function addOpportunity() {
 		return {
 			scope: {
 				customer: "="
 			},
-			templateUrl: '/opportunity/template/addOpportunity.tmpl.cshtml',
+			templateUrl:  require('./templates/addOpportunity.tmpl.cshtml'),
 			controller: controller,
 			controllerAs: 'vm'
 		}
@@ -42,4 +42,4 @@
 				});
 		}
 	}
-})();
+}

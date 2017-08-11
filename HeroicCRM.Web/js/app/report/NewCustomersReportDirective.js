@@ -1,12 +1,12 @@
-﻿(function() {
-	'use strict';
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.directive('newCustomersReport', newCustomersReport);
+    ngModule.directive('newCustomersReport', newCustomersReport);
 
 	function newCustomersReport() {
 		return {
 			scope: true,
-			templateUrl: '/js/app/report/templates/newCustomersReport.tmpl.html',
+			templateUrl:  require('./templates/newCustomersReport.tmpl.html'),
 			controller: controller,
 			controllerAs: 'vm'
 		}
@@ -24,4 +24,4 @@
 				vm.isLoading = false;
 			});
 	}
-})();
+}

@@ -1,14 +1,11 @@
-﻿require('../ui-grid');
-require('../jquery');
-require('../angular');
-require('../ui-bootstrap');
-require('../bootstrap.min');
-require('../angular-animate');
+﻿
+const angular = require('angular');
+const ngModule = angular.module('HeroicCRM', ['ngAnimate', 'ui.bootstrap', 'ui.grid']);
 
-require('../../css/layout.css')
-
-(function () {
-	'use strict';
-
-	window.app = angular.module('HeroicCRM', ['ngAnimate', 'ui.bootstrap', 'ui.grid']);
-})();
+require('./authentication')(ngModule);
+require('./customer')(ngModule);
+require('./opportunity')(ngModule);
+require('./profile')(ngModule);
+require('./report')(ngModule);
+require('./risk')(ngModule);
+require('./utility')(ngModule);

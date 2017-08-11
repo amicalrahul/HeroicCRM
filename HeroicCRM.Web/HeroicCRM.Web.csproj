@@ -197,9 +197,8 @@
     <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="js\angular-animate.js" />
-    <Content Include="js\angular.js" />
     <Content Include="js\app\app.js" />
+    <Content Include="js\app\authentication\index.js" />
     <Content Include="js\app\authentication\LoginController.js" />
     <Content Include="js\app\customer\EditCustomerDirective.js" />
     <Content Include="js\app\customer\AddCustomerDirective.js" />
@@ -223,14 +222,11 @@
     <Content Include="js\app\utility\InputValidationIconsDirective.js" />
     <Content Include="js\app\utility\MvcGridDirective.js" />
     <Content Include="js\app\utility\ParseDateFilter.js" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\jquery.js" />
-    <Content Include="js\ui-bootstrap.js" />
-    <Content Include="js\ui-grid.js" />
+    <Content Include="js\polyfills.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionResults\BetterJsonResult.cs" />
@@ -302,6 +298,7 @@
     <Content Include="css\ui-grid.ttf" />
     <Content Include="css\ui-grid.woff" />
     <Content Include="js\app\web.config" />
+    <Content Include="package.json" />
     <None Include="Views\Authentication\Login.cshtml" />
     <None Include="Views\Customer\Index.cshtml" />
     <None Include="Views\Home\Index.cshtml" />

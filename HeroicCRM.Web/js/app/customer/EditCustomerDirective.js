@@ -1,14 +1,14 @@
-﻿(function() {
-	"use strict";
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.directive('editCustomer', editCustomer);
+    ngModule.directive('editCustomer', editCustomer);
 
 	function editCustomer() {
 		return {
 			scope: {
 				customer: "="
 			},
-			templateUrl: '/customer/template/editCustomer.tmpl.cshtml',
+			templateUrl:  require('./templates/editCustomer.tmpl.cshtml'),
 			controller: controller,
 			controllerAs: 'vm'
 		}
@@ -38,4 +38,4 @@
 				});
 		}
 	}
-})();
+}

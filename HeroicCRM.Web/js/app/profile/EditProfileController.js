@@ -1,7 +1,7 @@
-﻿(function() {
-	'use strict';
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.controller('EditProfileController', EditProfileController);
+    ngModule.controller('EditProfileController', EditProfileController);
 
 	EditProfileController.$inject = ['$http', 'editProfileConfig', 'model'];
 	function EditProfileController($http, editProfileConfig, model) {
@@ -27,4 +27,4 @@
 				});
 		}
 	}
-})();
+}

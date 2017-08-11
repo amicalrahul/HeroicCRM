@@ -1,7 +1,7 @@
-﻿(function() {
-	'use strict';
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.controller('CustomerListController', CustomerListController);
+    ngModule.controller('CustomerListController', CustomerListController);
 
 	CustomerListController.$inject = ['$modal', 'customerSvc'];
 	function CustomerListController($modal, customerSvc) {
@@ -16,4 +16,4 @@
 			});
 		}
 	}
-})();
+}

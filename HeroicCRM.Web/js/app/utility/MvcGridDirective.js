@@ -1,6 +1,7 @@
-﻿(function () {
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.directive('mvcGrid', mvcGrid);
+    ngModule.directive('mvcGrid', mvcGrid);
 	function mvcGrid() {
 		return {
 			scope: {
@@ -43,4 +44,4 @@
 			});
 	}
 
-})();
+}

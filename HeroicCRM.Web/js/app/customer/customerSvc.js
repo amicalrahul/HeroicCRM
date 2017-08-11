@@ -1,5 +1,7 @@
-﻿(function() {
-	window.app.factory('customerSvc', customerSvc);
+﻿module.exports = function (ngModule){
+    'use strict';
+
+    ngModule.factory('customerSvc', customerSvc);
 
 	customerSvc.$inject = ['$http'];
 	function customerSvc($http) {
@@ -46,4 +48,4 @@
 			return null;
 		}
 	}
-})();
+}

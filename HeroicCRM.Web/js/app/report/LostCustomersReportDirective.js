@@ -1,12 +1,12 @@
-﻿(function() {
-	'use strict';
+﻿module.exports = function (ngModule){
+    'use strict';
 
-	window.app.directive('lostCustomersReport', lostCustomersReport);
+    ngModule.directive('lostCustomersReport', lostCustomersReport);
 
 	function lostCustomersReport() {
 		return {
 			scope: true,
-			templateUrl: '/js/app/report/templates/lostCustomersReport.tmpl.html',
+			templateUrl:  require('./templates/lostCustomersReport.tmpl.html'),
 			controller: controller,
 			controllerAs: 'vm'
 		}
@@ -24,4 +24,4 @@
 				vm.isLoading = false;
 			});
 	}
-})();
+}
