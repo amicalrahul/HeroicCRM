@@ -7,8 +7,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var WebpackRTLPlugin = require('webpack-rtl-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var UglifyJsPlugin = require('uglify-js-plugin');
 module.exports = {
-    devtool: 'source-map',
     performance: {
         hints: false
     },
@@ -67,6 +67,10 @@ module.exports = {
         exprContextCritical: false
     },
     plugins: [
+        new UglifyJsPlugin({
+        compress: true, //default 'true', you can pass 'false' to disable this plugin 
+        debug: true //default 'false', it will display some information in console 
+    }),
     //    new ExtractTextPlugin('Built/style.css'),
     //new WebpackRTLPlugin(),
         //new webpack.optimize.CommonsChunkPlugin({
