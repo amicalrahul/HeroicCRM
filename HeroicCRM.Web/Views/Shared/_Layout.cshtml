@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>@ViewBag.Title - Heroic CRM</title>
-	@Styles.Render("~/css/all.css")
+	@*@Styles.Render("~/css/all.css")*@
 	@RenderSection("Styles", required: false)
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,8 +26,9 @@
 		<!-- /#page-wrapper -->
 	</div>
 	<!-- /#wrapper -->
-	@Scripts.Render("~/js/all.js")
+	@*@Scripts.Render("~/js/all.js")*@
 	@RenderSection("Scripts", required: false)
+    <script src="~/Built/app.bundle.js"></script>
 </body>
 </html>
 

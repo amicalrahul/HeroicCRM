@@ -11,7 +11,7 @@ namespace HeroicCRM.Web
 		{
 			AreaRegistration.RegisterAllAreas();
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
-			BundleConfig.RegisterBundles(BundleTable.Bundles);
+			//BundleConfig.RegisterBundles(BundleTable.Bundles);
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			EFConfig.Initialize();
 			SeedData.Init();

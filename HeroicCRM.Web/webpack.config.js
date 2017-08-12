@@ -35,10 +35,10 @@ module.exports = {
         //    loaders: ['awesome-typescript-loader', 'source-map-loader', 'tslint-loader']
         //}, {
             test: /\.(png|jpg|gif|woff|woff2|ttf|svg|eot)$/,
-            loader: 'file-loader?name=assets/[name]-[hash:6].[ext]'
+            loader: 'url-loader?limit=10000'
         }, {
             test: /favicon.ico$/, exclude: /node_modules/,
-            loader: 'file-loader?name=/[name].[ext]'
+            loader: 'url-loader?limit=10000'
         }, {
             test: /\.css$/, 
             loader: 'style-loader!css-loader'
