@@ -16,7 +16,7 @@ module.exports = {
     entry: {  
         "polyfills": "./polyfills.js",  
         // "vendor":"./A2/vendor.ts",    
-        "app": './app/app.js'
+        "app": './angular1/app.js'
     },  
     output: {
         path: path.join(__dirname, 'Built'),
