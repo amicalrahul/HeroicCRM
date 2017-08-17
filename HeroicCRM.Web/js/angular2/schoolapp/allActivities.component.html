@@ -1,0 +1,54 @@
+﻿<div class="container">
+    <h1>All Activities</h1>
+    <form [formGroup]="activitiesForm">
+        ﻿<div class='panel panel-primary'>
+            <div class='panel-body'>
+                <div class="col-md-8 col-lg-8 col-md-offset-1 col-lg-offset-1">
+                    <activity-seacrh></activity-seacrh>
+                </div>
+                <div class="col-md-8 col-lg-8 col-md-offset-1 col-lg-offset-1">
+                    <!--<h1>All Activities</h1>-->
+                    <div>
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading" style="background-color:#2e87f5">Registered Activities</div>
+                            <!-- Table -->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Activity Name</th>
+                                        <th>Classroom</th>
+                                        <th>Date</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        <input class="form-control" formControlName="activityName" placeholder="Activity name">
+                                    </td>
+                                    <td>
+                                        <select class="form-control" formControlName="classroom">
+                                            <option value="default">Select a Classroom...</option>
+                                            <option *ngFor="let classroom of classrooms" [ngValue]="classroom">{{classroom.name}}</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="date" class="form-control" formControlName="date" placeholder="">
+                                    </td>
+                                    <td><button type="submit" class="btn btn-success" [disabled]="!activitiesForm.valid"
+                                                (click)="submit()" >Add Activity</button> </td>
+                                </tr>
+                                <tr *ngFor='let activity of allActivities'>
+                                    <td>{{ activity.name }}</td>
+                                    <td>{{ activity.classroom.name }}</td>
+                                    <td>{{ activity.date | date:'fullDate' }}</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
